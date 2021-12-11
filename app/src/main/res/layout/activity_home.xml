@@ -136,17 +136,27 @@
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:srcCompat="@drawable/ic_cases" />
 
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/linear_ic_cases"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:gravity="right"
-                                android:src="@drawable/ic_up_arrow"/>
+                                android:src="@drawable/ic_up_arrow" />
+
                             <TextView
                                 android:id="@+id/lbl_today_cases"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:gravity="right"
+                                android:gravity="center"
                                 android:text="Lbl_Cases" />
+
                         </LinearLayout>
 
                         <LinearLayout
@@ -226,6 +236,27 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/linear_ic_death"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_up_arrow" />
+
+                            <TextView
+                                android:id="@+id/lbl_today_death"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Lbl_Cases" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:layout_constraintBottom_toTopOf="@+id/linear_today_death"
@@ -302,6 +333,27 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/linear_ic_recovered"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_up_arrow" />
+
+                            <TextView
+                                android:id="@+id/lbl_today_recovered"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Lbl_Cases" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:layout_constraintBottom_toTopOf="@+id/linear_today_recovred"
@@ -375,6 +427,27 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:srcCompat="@drawable/ic_treating" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/linear_ic_treating"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_up_arrow" />
+
+                            <TextView
+                                android:id="@+id/lbl_today_treating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Lbl_Cases" />
+
                         </LinearLayout>
 
                         <LinearLayout
