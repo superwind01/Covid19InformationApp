@@ -166,7 +166,6 @@
                             app:layout_constraintTop_toBottomOf="@+id/linear_ic_cases">
 
                             <TextView
-                                android:id="@+id/txt_total_cases"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/cases"
@@ -185,15 +184,14 @@
                             app:layout_constraintBottom_toBottomOf="parent">
 
                             <TextView
-                                android:id="@+id/txt_today_cases"
+                                android:id="@+id/txt_total_cases"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/today"
+                                android:text="@string/total"
                                 android:textSize="20sp"
                                 android:layout_marginLeft="5dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/txt_total_cases" />
+                                app:layout_constraintStart_toStartOf="parent" />
 
                         </LinearLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -263,7 +261,6 @@
                             app:layout_constraintTop_toBottomOf="@+id/linear_ic_death">
 
                             <TextView
-                                android:id="@+id/txt_total_death"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/death"
@@ -282,15 +279,14 @@
                             app:layout_constraintBottom_toBottomOf="parent">
 
                             <TextView
-                                android:id="@+id/txt_today_death"
+                                android:id="@+id/txt_total_death"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/today"
+                                android:text="@string/total"
                                 android:textSize="20sp"
                                 android:layout_marginLeft="5dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/txt_total_cases" />
+                                app:layout_constraintStart_toStartOf="parent" />
 
                         </LinearLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -360,7 +356,6 @@
                             app:layout_constraintTop_toBottomOf="@+id/linear_ic_recovered">
 
                             <TextView
-                                android:id="@+id/txt_total_recovered"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/recovered"
@@ -379,15 +374,14 @@
                             app:layout_constraintBottom_toBottomOf="parent">
 
                             <TextView
-                                android:id="@+id/txt_today_recovered"
+                                android:id="@+id/txt_total_recovered"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/today"
+                                android:text="@string/total"
                                 android:textSize="20sp"
                                 android:layout_marginLeft="5dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/txt_total_cases" />
+                                app:layout_constraintStart_toStartOf="parent" />
 
                         </LinearLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -457,7 +451,6 @@
                             app:layout_constraintTop_toBottomOf="@+id/linear_ic_treating">
 
                             <TextView
-                                android:id="@+id/txt_total_treating"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/treating"
@@ -476,15 +469,14 @@
                             app:layout_constraintBottom_toBottomOf="parent">
 
                             <TextView
-                                android:id="@+id/txt_today_treating"
+                                android:id="@+id/txt_total_treating"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/today"
+                                android:text="@string/total"
                                 android:textSize="20sp"
                                 android:layout_marginLeft="5dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/txt_total_cases" />
+                                app:layout_constraintStart_toStartOf="parent" />
 
                         </LinearLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>

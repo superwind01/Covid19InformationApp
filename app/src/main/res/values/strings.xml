@@ -18,4 +18,5 @@
     <string name="death">Death</string>
     <string name="cases">Cases</string>
     <string name="today">Today</string>
+    <string name="total">Total</string>
 </resources>

@@ -67,6 +67,12 @@ public class VolleyService {
 
                     ArrayList<Location> locationList = new ArrayList<>();
                     Arrays.stream(objectLocation).forEach(locationList::add);
+
+                    //Đổ dữ liệu vào các object
+                    modelCommon.setToday(objectToday);
+                    modelCommon.setTotal(objectTotal);
+                    modelCommon.setLocations(locationList);
+                    modelCommon.setOverview(overviewInfos);
                 }
             }
         }, new Response.ErrorListener() {
@@ -76,6 +82,7 @@ public class VolleyService {
             }
         }
         );
-
+        //Đợi các requesst tiếp theo
+        requestQueue.add(jsonObjectRequest);
     }
 }
