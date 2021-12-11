@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Covid19 Information</string>
+    <string name="title_activity_home">Home</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="hello">Hello,</string>
+    <string name="name">Le Dinh Hieu</string>
+    <string name="vietnam">Viet Nam</string>
+    <string name="world">World</string>
+    <string name="label">Label</string>
+    <string name="num_info">Number</string>
+    <string name="userImgDes">"User Image "</string>
+    <string name="item_home">Home</string>
+    <string name="item_qr">QR Scan</string>
+    <string name="item_health">Health</string>
+    <string name="recovered">Recovered</string>
+    <string name="treating">Treating</string>
+    <string name="death">Death</string>
+    <string name="cases">Cases</string>
+    <string name="today">Today</string>
+</resources>
