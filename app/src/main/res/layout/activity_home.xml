@@ -109,7 +109,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_margin="16dp"
+                    android:layout_margin="12dp"
                     android:layout_weight="1"
                     android:background="@drawable/light_blue_btn_background">
 
@@ -205,7 +205,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_margin="16dp"
+                    android:layout_margin="12dp"
                     android:layout_weight="1"
                     android:background="@drawable/light_blue_btn_background">
 
@@ -300,7 +300,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_margin="16dp"
+                    android:layout_margin="12dp"
                     android:layout_weight="1"
                     android:background="@drawable/light_blue_btn_background">
 
@@ -395,7 +395,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_margin="16dp"
+                    android:layout_margin="12dp"
                     android:layout_weight="1"
                     android:background="@drawable/light_blue_btn_background">
 
@@ -433,7 +433,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/ic_up_arrow" />
+                                android:src="@drawable/ic_down_arrow" />
 
                             <TextView
                                 android:id="@+id/lbl_today_treating"
