@@ -3,15 +3,17 @@ package com.example.covid19information;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import api.VolleryResponseListener;
 import api.VolleyService;
+import model.Info;
 import model.ModelCommon;
 import model.Today;
 import model.Total;
+
 
 public class Home extends AppCompatActivity {
 
@@ -23,49 +25,55 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        // hide status bar
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        // hide status bar
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        addEvents();
         addControls();
-
-
+        addEvents();
     }
 
 
-    private void useVolley() {
-        VolleyService.getRequest(this, new VolleryResponseListener() {
-            @Override
-            public void onErro(String mesage) {
 
-            }
+    public void addEvents() {
+                VolleyService.getRequest(this, new VolleryResponseListener() {
+                    @Override
+                    public void onErro(String mesage) {
 
-            @Override
-            public void onResponse(ModelCommon response) {
+                    }
+
+                    @Override
+                    public void onResponse(ModelCommon response) {
                 //Khai bao cac thanh phan lay du lieu tu API
-                Today today = response.getToday();
-                Total total = response.getTotal();
+                if (response != null) {
+                    Toast.makeText(Home.this, "Đang tải dữ liệu", Toast.LENGTH_SHORT).show();
+                    final Info today = response.getToday().getInfoInternal();
+                    Log.e("Log_today_home", today.toString());
+                    final Total total = response.getTotal();
+                    runOnUiThread(new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            //Gan du lieu cho txt trong Home
+                            txtTodayVietnamCase.setText(String.valueOf(today.getCases()));
+                            txtTodayVietnamDeath.setText(String.valueOf(today.getDeath()));
+                            txtTodayVietnamRecovered.setText(String.valueOf(today.getRecovered()));
+                            txtTodayVietnamTreating.setText(String.valueOf(today.getTreating()));
 
-                //Gan du lieu cho txt trong Home
-                txtTodayVietnamCase.setText(String.valueOf(today.getInfoInternal().getCases()));
-                txtTodayVietnamDeath.setText(String.valueOf(today.getInfoInternal().getDeath()));
-                txtTodayVietnamRecovered.setText(String.valueOf(today.getInfoInternal().getRecovered()));
-                txtTodayVietnamTreating.setText(String.valueOf(today.getInfoInternal().getTreating()));
+                            txtTotalVietnamCases.setText(String.valueOf(total.getInfoInternal().getCases()));
+                            txtTotalVietnamDeath.setText(String.valueOf(total.getInfoInternal().getDeath()));
+                            txtTotalVietnamRecovered.setText(String.valueOf(total.getInfoInternal().getRecovered()));
+                            txtTotalVietnamTreating.setText(String.valueOf(total.getInfoInternal().getTreating()));
+                        }
 
-                txtTotalVietnamCases.setText(String.valueOf(total.getInfoInternal().getCases()));
-                txtTotalVietnamDeath.setText(String.valueOf(total.getInfoInternal().getDeath()));
-                txtTotalVietnamRecovered.setText(String.valueOf(total.getInfoInternal().getRecovered()));
-                txtTotalVietnamTreating.setText(String.valueOf(total.getInfoInternal().getTreating()));
-            }
-        });
+                    }));
+                } else {
+                    Toast.makeText(Home.this, "Không thể tải được dữ liệu", Toast.LENGTH_SHORT).show();
+                }
+                    }
+                });
     }
 
-    private void addEvents() {
-        Toast.makeText(Home.this, "Đang tải dữ liệu", Toast.LENGTH_SHORT).show();
-        useVolley();
-    }
-
-    private void addControls() {
+    public void addControls()
+    {
         txtTotalVietnamCases = findViewById(R.id.txt_total_cases);
         txtTotalVietnamDeath = findViewById(R.id.txt_total_death);
         txtTotalVietnamRecovered = findViewById(R.id.txt_total_recovered);

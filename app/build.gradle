@@ -28,6 +28,11 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    //ADD
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
 }
 
 dependencies {
