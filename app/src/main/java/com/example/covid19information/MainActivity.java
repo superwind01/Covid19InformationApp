@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         mViewPager.setAdapter(adapter);
 
-        //Tao su kien khi chom vao icon o bottom navigation thi se gan gia tri cho mViewPager
+        //Tao su kien khi chon vao icon o bottom navigation thi se gan gia tri cho mViewPager
         mBottomNavigationView.setOnItemSelectedListener(menuItem -> {
             int id = menuItem.getItemId();
             if(id == R.id.nav_home){
