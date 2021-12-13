@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 /**
@@ -25,9 +23,6 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     View view;
-
-    TextView txtTotalVietnamCases,txtTotalVietnamDeath,txtTotalVietnamRecovered,txtTotalVietnamTreating;
-    TextView txtTodayVietnamCase,txtTodayVietnamDeath,txtTodayVietnamRecovered,txtTodayVietnamTreating;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -59,49 +54,10 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        if (savedInstanceState != null) {
-            txtTotalVietnamCases = view.findViewById(R.id.txt_total_cases);
-            txtTotalVietnamDeath = view.findViewById(R.id.txt_total_death);
-            txtTotalVietnamRecovered = view.findViewById(R.id.txt_total_recovered);
-            txtTotalVietnamTreating = view.findViewById(R.id.txt_total_treating);
-
-            txtTodayVietnamCase = view.findViewById(R.id.lbl_today_cases);
-            txtTodayVietnamDeath = view.findViewById(R.id.lbl_today_death);
-            txtTodayVietnamRecovered = view.findViewById(R.id.lbl_today_recovered);
-            txtTodayVietnamTreating = view.findViewById(R.id.lbl_today_treating);
-
-            txtTotalVietnamCases.setText(savedInstanceState.getInt("string_total_cases")) ;
-            txtTotalVietnamDeath.setText(savedInstanceState.getInt("string_total_death")) ;
-            txtTotalVietnamRecovered.setText(savedInstanceState.getInt("string_total_recovered")) ;
-            txtTotalVietnamTreating.setText(savedInstanceState.getInt("string_total_treating")) ;
-
-            txtTodayVietnamCase.setText(savedInstanceState.getInt("string_today_cases")) ;
-            txtTodayVietnamDeath.setText(savedInstanceState.getInt("string_today_death")) ;
-            txtTodayVietnamRecovered.setText(savedInstanceState.getInt("string_today_recovered")) ;
-            txtTodayVietnamTreating.setText(savedInstanceState.getInt("string_today_treating")) ;
-            view = inflater.inflate(R.layout.fragment_home, container, false);
-        }
-        // Inflate the layout for this fragment
-        else{
-                view = inflater.inflate(R.layout.fragment_home, container, false);
-
-            }
+        view = inflater.inflate(R.layout.fragment_home, container, false);
         return view;
     }
 
-    public void onSaveInstanceState(@NonNull Bundle outState)
-    {
-        outState.putString("string_total_cases",txtTotalVietnamCases.toString());
-        outState.putString("string_total_death", txtTotalVietnamDeath.toString());
-        outState.putString("string_total_recovered", txtTotalVietnamRecovered.toString());
-        outState.putString("string_total_treating", txtTotalVietnamTreating.toString());
-
-        outState.putString("string_today_cases", txtTodayVietnamCase.toString());
-        outState.putString("string_today_death", txtTodayVietnamDeath.toString());
-        outState.putString("string_today_recovered", txtTodayVietnamRecovered.toString());
-        outState.putString("string_today_treating", txtTodayVietnamTreating.toString());
-        super.onSaveInstanceState(outState);
-    }
 
 
 }
