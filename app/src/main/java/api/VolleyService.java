@@ -13,7 +13,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import org.json.JSONArray;
@@ -29,7 +28,7 @@ import model.Today;
 import model.Total;
 
 public class VolleyService {
-    public static void getRequest(Context context, final VolleryResponseListener listener) {
+    public static ModelCommon getRequest(Context context, final VolleryResponseListener listener) {
         //Khai bao de nhan du lieu
         ModelCommon modelCommon = new ModelCommon();
 
@@ -42,6 +41,7 @@ public class VolleyService {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onResponse(JSONObject response) {
+                Log.e("LogResponse", response.toString());
                 //Lay cac Json tuong ung
                 if(response!=null){
                     JSONObject total = response.optJSONObject("total");
@@ -49,24 +49,33 @@ public class VolleyService {
                     JSONArray overview = response.optJSONArray("overview");
                     JSONArray locations = response.optJSONArray("locations");
                     // Convert Json Object va Json Array bang Gson
+
                     Gson gson = new Gson();
                     JsonParser parser = new JsonParser();
+
                     JsonElement mJson = parser.parse(String.valueOf(total));
-                    Total objectTotal = gson.fromJson(mJson,Total.class);
-                    mJson = parser.parse(String.valueOf(total));
-                    Today objectToday = gson.fromJson(mJson,Today.class);
+                    modelCommon.setTotal(gson.fromJson(mJson,Total.class));
+
+                    mJson = parser.parse(String.valueOf(today));
+                    modelCommon.setToday(gson.fromJson(mJson,Today.class));
 
                     mJson = parser.parse(String.valueOf(overview));
                     OverViewInfo[] objectOverViewInfo = gson.fromJson(mJson,OverViewInfo[].class);
 
-                    ArrayList<OverViewInfo> overviewInfos = new ArrayList<>();
-                    Arrays.stream(objectOverViewInfo).forEach(overviewInfos::add);
+                  ArrayList<OverViewInfo> overviewInfos = new ArrayList<>();
+                 Arrays.stream(objectOverViewInfo).forEach(overviewInfos::add);
 
                     mJson = parser.parse(String.valueOf(locations));
                     Location[] objectLocation = gson.fromJson(mJson,Location[].class);
 
                     ArrayList<Location> locationList = new ArrayList<>();
                     Arrays.stream(objectLocation).forEach(locationList::add);
+
+                    //Đổ dữ liệu vào các object
+                    modelCommon.setLocations(locationList);
+                    modelCommon.setOverview(overviewInfos);
+                    // Lang nghe cac response
+                    listener.onResponse(modelCommon);
                 }
             }
         }, new Response.ErrorListener() {
@@ -76,6 +85,8 @@ public class VolleyService {
             }
         }
         );
-
+        //Đợi các requesst tiếp theo
+        requestQueue.add(jsonObjectRequest);
+        return modelCommon;
     }
 }
