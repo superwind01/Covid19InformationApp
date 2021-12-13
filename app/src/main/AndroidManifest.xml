@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Covid19Information"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Home"
+            android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

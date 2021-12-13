@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
-    tools:context=".Home">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/linear_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-    <ImageButton
-        android:id="@+id/userImg"
-        android:contentDescription="@string/userImgDes"
-        android:layout_height="60dp"
-        android:layout_width="60dp"
-        android:src="@drawable/ic_user_img"
-        android:background="@drawable/stroke_corner_img"
-        android:scaleType="center"
-        tools:layout_marginTop="12dp"
-        tools:layout_marginBottom="12dp"/>
+        <ImageButton
+            android:id="@+id/userImg"
+            android:contentDescription="@string/userImgDes"
+            android:layout_height="60dp"
+            android:layout_width="60dp"
+            android:src="@drawable/ic_user_img"
+            android:background="@drawable/stroke_corner_img"
+            android:scaleType="center"
+            tools:layout_marginTop="12dp"
+            tools:layout_marginBottom="12dp"/>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
 
-                <TextView
+            <TextView
                 android:id="@+id/txtHello"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -39,17 +41,17 @@
                 app:layout_constraintTop_toTopOf="@id/linear_header"
                 tools:layout_marginLeft="16dp" />
 
-                <TextView
-                    android:id="@+id/textName"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
-                    android:text="@string/name"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/userImg"
-                    app:layout_constraintTop_toBottomOf="@id/txtHello"
-                    tools:layout_marginLeft="16dp" />
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@string/name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/userImg"
+                app:layout_constraintTop_toBottomOf="@id/txtHello"
+                tools:layout_marginLeft="16dp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -91,10 +93,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/light_blue_corner_background"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintTop_toBottomOf="@+id/linear_local"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_local">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -108,10 +110,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_margin="12dp"
                     android:layout_weight="1"
-                    android:background="@drawable/light_blue_btn_background">
+                    android:background="@drawable/light_blue_btn_background"
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -168,10 +170,10 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:text="@string/cases"
                                 android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:layout_marginLeft="5dp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@id/linear_ic_cases" />
 
@@ -187,9 +189,9 @@
                                 android:id="@+id/txt_total_cases"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:text="@string/total"
                                 android:textSize="20sp"
-                                android:layout_marginLeft="5dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -197,6 +199,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -204,10 +207,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_margin="12dp"
                     android:layout_weight="1"
-                    android:background="@drawable/light_blue_btn_background">
+                    android:background="@drawable/light_blue_btn_background"
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -263,10 +266,10 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:text="@string/death"
                                 android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:layout_marginLeft="5dp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@id/linear_ic_cases" />
 
@@ -282,9 +285,9 @@
                                 android:id="@+id/txt_total_death"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:text="@string/total"
                                 android:textSize="20sp"
-                                android:layout_marginLeft="5dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -292,6 +295,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -299,10 +303,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_margin="12dp"
                     android:layout_weight="1"
-                    android:background="@drawable/light_blue_btn_background">
+                    android:background="@drawable/light_blue_btn_background"
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -358,10 +362,10 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:text="@string/recovered"
                                 android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:layout_marginLeft="5dp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@id/linear_ic_recovered" />
 
@@ -377,9 +381,9 @@
                                 android:id="@+id/txt_total_recovered"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:text="@string/total"
                                 android:textSize="20sp"
-                                android:layout_marginLeft="5dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -387,6 +391,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -394,10 +399,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_margin="12dp"
                     android:layout_weight="1"
-                    android:background="@drawable/light_blue_btn_background">
+                    android:background="@drawable/light_blue_btn_background"
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -453,10 +458,10 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:text="@string/treating"
                                 android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:layout_marginLeft="5dp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@id/linear_ic_treating" />
 
@@ -472,9 +477,9 @@
                                 android:id="@+id/txt_total_treating"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:text="@string/total"
                                 android:textSize="20sp"
-                                android:layout_marginLeft="5dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -487,23 +492,5 @@
         </TableLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="12dp"
-        android:background="@drawable/round_corner"
-        android:elevation="2dp"
-        app:itemIconSize="30dp"
-        app:itemIconTint="@drawable/item_selector"
-        app:itemRippleColor="@android:color/transparent"
-        app:labelVisibilityMode="unlabeled"
-        app:layout_constraintTop_toBottomOf="@id/consLayout_info"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/item_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-
+</FrameLayout>
