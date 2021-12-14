@@ -8,8 +8,9 @@
     tools:context=".MainActivity">
 
 
-    <FrameLayout
-        android:id="@+id/fragment_body"
+    <androidx.viewpager2.widget.ViewPager2
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
