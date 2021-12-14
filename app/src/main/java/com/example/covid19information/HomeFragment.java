@@ -33,7 +33,8 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     View view;
-    Button btn_vietnam, btn_world;
+    Button btnVietnam, btnWorld;
+    int pick_item;
 
     // Khai bao text view o HomeFragment
     TextView txtTotalVietnamCases,txtTotalVietnamDeath,txtTotalVietnamRecovered,txtTotalVietnamTreating;
@@ -64,23 +65,7 @@ public class HomeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        btn_vietnam = view.findViewById(R.id.btn_vietnam);
-        btn_world = view.findViewById(R.id.btn_world);
-
-        btn_vietnam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        btn_world.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
+        pick_item = 0;
         //Do du lieu tu API vao textview
         addEvents();
     }
@@ -89,6 +74,27 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home, container, false);
+
+
+        btnVietnam = view.findViewById(R.id.btn_vietnam);
+        btnWorld = view.findViewById(R.id.btn_world);
+
+        btnVietnam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pick_item = 0;
+                addEvents();
+            }
+        });
+
+        btnWorld.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pick_item = 1;
+                addEvents();
+            }
+        });
+
         return view;
     }
 
@@ -111,6 +117,7 @@ public class HomeFragment extends Fragment {
                         //Gan ID cho text view
                         addControls();
                         //Gan du lieu cho txt trong Home
+                    if(pick_item == 0) {
                         txtTodayVietnamCase.setText(String.valueOf(today.getInfoInternal().getCases()));
                         txtTodayVietnamDeath.setText(String.valueOf(today.getInfoInternal().getDeath()));
                         txtTodayVietnamRecovered.setText(String.valueOf(today.getInfoInternal().getRecovered()));
@@ -120,6 +127,19 @@ public class HomeFragment extends Fragment {
                         txtTotalVietnamDeath.setText(String.valueOf(total.getInfoInternal().getDeath()));
                         txtTotalVietnamRecovered.setText(String.valueOf(total.getInfoInternal().getRecovered()));
                         txtTotalVietnamTreating.setText(String.valueOf(total.getInfoInternal().getTreating()));
+                    }
+                    else
+                    {
+                        txtTodayVietnamCase.setText(String.valueOf(today.getInfoWorld().getCases()));
+                        txtTodayVietnamDeath.setText(String.valueOf(today.getInfoWorld().getDeath()));
+                        txtTodayVietnamRecovered.setText(String.valueOf(today.getInfoWorld().getRecovered()));
+                        txtTodayVietnamTreating.setText(String.valueOf(today.getInfoWorld().getTreating()));
+
+                        txtTotalVietnamCases.setText(String.valueOf(total.getInfoWorld().getCases()));
+                        txtTotalVietnamDeath.setText(String.valueOf(total.getInfoWorld().getDeath()));
+                        txtTotalVietnamRecovered.setText(String.valueOf(total.getInfoWorld().getRecovered()));
+                        txtTotalVietnamTreating.setText(String.valueOf(total.getInfoWorld().getTreating()));
+                    }
                 } else {
                     Toast.makeText(getActivity(), "Không thể tải được dữ liệu", Toast.LENGTH_SHORT).show();
                 }
