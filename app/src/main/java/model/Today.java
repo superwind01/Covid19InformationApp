@@ -13,4 +13,12 @@ public class Today {
     public void setInfoInternal(Info infoInternal) {
         this.infoInternal = infoInternal;
     }
+    @SerializedName("world")
+    private Info infoWorld;
+    public Info getInfoWorld(){
+        return infoWorld;
+    }
+    public void setInfoWorld(Info infoWorld){
+        this.infoWorld = infoWorld;
+    }
 }

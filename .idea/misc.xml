@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/Covid19InformationApp/app/src/main/res/layout/activity_2.xml" value="0.24909420289855072" />
+        <entry key="..\:/AndroidStudioProjects/Covid19InformationApp/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/Covid19InformationApp/app/src/main/res/layout/activity_main.xml" value="0.25815217391304346" />
+        <entry key="..\:/AndroidStudioProjects/Covid19InformationApp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/Covid19InformationApp/app/src/main/res/layout/fragment_home__world.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/Covid19InformationApp/app/src/main/res/layout/fragment_q_r.xml" value="0.27291666666666664" />
+        <entry key="..\:/AndroidStudioProjects/Covid19InformationApp/app/src/main/res/menu/info_menu.xml" value="0.27291666666666664" />
+        <entry key="..\:/AndroidStudioProjects/Covid19InformationApp/app/src/main/res/menu/item_menu.xml" value="0.27291666666666664" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/btn_background_select.xml" value="0.1" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/btn_chose_local.xml" value="0.1170940170940171" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/btn_view.xml" value="0.1170940170940171" />
@@ -14,7 +22,6 @@
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/info_view.xml" value="0.12008547008547009" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/item_selector.xml" value="0.1141025641025641" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/light_blue_btn_background.xml" value="0.1111111111111111" />
-        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/light_blue_corner_background.xml" value="0.12008547008547009" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/lightblue_corner_background.xml" value="0.1111111111111111" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/linear_layout_header.xml" value="0.12008547008547009" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/linear_shadow.xml" value="0.16538461538461538" />
@@ -22,12 +29,8 @@
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/stroke_corner_img.xml" value="0.1141025641025641" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/top_corner.xml" value="0.1111111111111111" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/user_image.xml" value="0.1170940170940171" />
-        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/activity_home2.xml" value="0.1" />
-        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/activity_main.xml" value="0.1453804347826087" />
-        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/fragment_health.xml" value="0.11196581196581197" />
-        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/fragment_home.xml" value="0.11200000000000002" />
-        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/fragment_q_r.xml" value="0.136" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/gridview_row.xml" value="0.176" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/show_info.xml" value="0.10384615384615385" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/menu/info_menu.xml" value="0.264" />
@@ -36,7 +39,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
