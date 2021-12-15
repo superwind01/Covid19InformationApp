@@ -12,16 +12,12 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager2 mViewPager;
     private BottomNavigationView mBottomNavigationView;
 
-
-
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     //Khai bao bottomNavigationView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         //Gan ID cho 2 bien da khai bao
         mViewPager = findViewById(R.id.view_pager);
@@ -68,10 +64,4 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 }
