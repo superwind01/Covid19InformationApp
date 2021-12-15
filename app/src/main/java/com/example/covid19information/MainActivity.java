@@ -1,6 +1,9 @@
 package com.example.covid19information;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -11,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 mViewPager;
     private BottomNavigationView mBottomNavigationView;
+    Button userImg;
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     //Khai bao bottomNavigationView
@@ -60,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                 }
+            }
+        });
+        userImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Info_activity.class);
+                startActivity(intent);
             }
         });
 

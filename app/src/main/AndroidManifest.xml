@@ -15,9 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid19Information"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".Activity2"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
