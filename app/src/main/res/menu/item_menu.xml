@@ -9,8 +9,8 @@
         android:title="@string/item_qr"
         android:icon="@drawable/ic_qr_code"/>
 
-    <item android:id="@+id/nav_health"
-        android:title="@string/item_health"
-        android:icon="@drawable/ic_health_info"/>
+    <item android:id="@+id/nav_info"
+        android:title="@string/item_user_info"
+        android:icon="@drawable/ic_user_info"/>
 
 </menu>

@@ -24,7 +24,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
                 return new PlaceHasBeenFragment();
 
             case 2:
-                return new HealthFragment();
+                return new InfoFragment();
             case 3:
                 return new QRFragment();
 

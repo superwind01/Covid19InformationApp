@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mBottomNavigationView;
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
-    //Khai bao bottomNavigationView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case 2:
-                        mBottomNavigationView.getMenu().findItem(R.id.nav_health).setChecked(true);
+                        mBottomNavigationView.getMenu().findItem(R.id.nav_info).setChecked(true);
                         break;
 
                 }
