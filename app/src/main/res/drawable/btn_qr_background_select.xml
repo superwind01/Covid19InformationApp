@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/light_white">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp"/>
+            <solid android:color="#4fc3f7"/>
+        </shape>
+        <selector>
+            <item android:state_pressed="true" android:color ="@color/light_blue_A200"/>
+            <item android:state_checked="true" android:color ="@color/light_blue_A200"/>
+            <item android:color="@color/black"/>
+        </selector>
+    </item>
+</ripple>

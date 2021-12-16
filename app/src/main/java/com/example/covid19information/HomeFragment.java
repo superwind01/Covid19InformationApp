@@ -34,11 +34,11 @@ public class HomeFragment extends Fragment {
     private String mParam2;
     View view;
     Button btnVietnam, btnWorld;
-    int pick_item;
+    int pick_item ;
 
     // Khai bao text view o HomeFragment
-    TextView txtTotalVietnamCases,txtTotalVietnamDeath,txtTotalVietnamRecovered,txtTotalVietnamTreating;
-    TextView txtTodayVietnamCase,txtTodayVietnamDeath,txtTodayVietnamRecovered,txtTodayVietnamTreating;
+    TextView txtTotalCases,txtTotalDeath,txtTotalRecovered,txtTotalTreating;
+    TextView txtTodayCase,txtTodayDeath,txtTodayRecovered,txtTodayTreating;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -75,10 +75,10 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home, container, false);
 
-
         btnVietnam = view.findViewById(R.id.btn_vietnam);
         btnWorld = view.findViewById(R.id.btn_world);
 
+        // pick item = 0  thi se mo trang vietnam, pic item = 1 thi mo trang world
         btnVietnam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,32 +114,40 @@ public class HomeFragment extends Fragment {
                     final Today today = response.getToday();
                     Log.e("Log_today_home", today.toString());
                     final Total total = response.getTotal();
-                        //Gan ID cho text view
-                        addControls();
-                        //Gan du lieu cho txt trong Home
-                    if(pick_item == 0) {
-                        txtTodayVietnamCase.setText(String.valueOf(today.getInfoInternal().getCases()));
-                        txtTodayVietnamDeath.setText(String.valueOf(today.getInfoInternal().getDeath()));
-                        txtTodayVietnamRecovered.setText(String.valueOf(today.getInfoInternal().getRecovered()));
-                        txtTodayVietnamTreating.setText(String.valueOf(today.getInfoInternal().getTreating()));
 
-                        txtTotalVietnamCases.setText(String.valueOf(total.getInfoInternal().getCases()));
-                        txtTotalVietnamDeath.setText(String.valueOf(total.getInfoInternal().getDeath()));
-                        txtTotalVietnamRecovered.setText(String.valueOf(total.getInfoInternal().getRecovered()));
-                        txtTotalVietnamTreating.setText(String.valueOf(total.getInfoInternal().getTreating()));
-                    }
-                    else
-                    {
-                        txtTodayVietnamCase.setText(String.valueOf(today.getInfoWorld().getCases()));
-                        txtTodayVietnamDeath.setText(String.valueOf(today.getInfoWorld().getDeath()));
-                        txtTodayVietnamRecovered.setText(String.valueOf(today.getInfoWorld().getRecovered()));
-                        txtTodayVietnamTreating.setText(String.valueOf(today.getInfoWorld().getTreating()));
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            //Gan ID cho text view
+                            addControls();
+                            //Gan du lieu cua vietnam cho txt va lbl
+                            if(pick_item == 0) {
+                                txtTodayCase.setText(String.valueOf(today.getInfoInternal().getCases()));
+                                txtTodayDeath.setText(String.valueOf(today.getInfoInternal().getDeath()));
+                                txtTodayRecovered.setText(String.valueOf(today.getInfoInternal().getRecovered()));
+                                txtTodayTreating.setText(String.valueOf(today.getInfoInternal().getTreating()));
 
-                        txtTotalVietnamCases.setText(String.valueOf(total.getInfoWorld().getCases()));
-                        txtTotalVietnamDeath.setText(String.valueOf(total.getInfoWorld().getDeath()));
-                        txtTotalVietnamRecovered.setText(String.valueOf(total.getInfoWorld().getRecovered()));
-                        txtTotalVietnamTreating.setText(String.valueOf(total.getInfoWorld().getTreating()));
-                    }
+                                txtTotalCases.setText(String.valueOf(total.getInfoInternal().getCases()));
+                                txtTotalDeath.setText(String.valueOf(total.getInfoInternal().getDeath()));
+                                txtTotalRecovered.setText(String.valueOf(total.getInfoInternal().getRecovered()));
+                                txtTotalTreating.setText(String.valueOf(total.getInfoInternal().getTreating()));
+                            }
+                            //Gan du lieu cua world cho txt va lbl
+                            else
+                            {
+                                txtTodayCase.setText(String.valueOf(today.getInfoWorld().getCases()));
+                                txtTodayDeath.setText(String.valueOf(today.getInfoWorld().getDeath()));
+                                txtTodayRecovered.setText(String.valueOf(today.getInfoWorld().getRecovered()));
+                                txtTodayTreating.setText(String.valueOf(today.getInfoWorld().getTreating()));
+
+                                txtTotalCases.setText(String.valueOf(total.getInfoWorld().getCases()));
+                                txtTotalDeath.setText(String.valueOf(total.getInfoWorld().getDeath()));
+                                txtTotalRecovered.setText(String.valueOf(total.getInfoWorld().getRecovered()));
+                                txtTotalTreating.setText(String.valueOf(total.getInfoWorld().getTreating()));
+                            }
+                        }
+                    });
+
                 } else {
                     Toast.makeText(getActivity(), "Không thể tải được dữ liệu", Toast.LENGTH_SHORT).show();
                 }
@@ -149,15 +157,15 @@ public class HomeFragment extends Fragment {
 
     public void addControls()
     {
-        txtTotalVietnamCases = view.findViewById(R.id.txt_total_cases);
-        txtTotalVietnamDeath = view.findViewById(R.id.txt_total_death);
-        txtTotalVietnamRecovered = view.findViewById(R.id.txt_total_recovered);
-        txtTotalVietnamTreating = view.findViewById(R.id.txt_total_treating);
+        txtTotalCases = view.findViewById(R.id.txt_total_cases);
+        txtTotalDeath = view.findViewById(R.id.txt_total_death);
+        txtTotalRecovered = view.findViewById(R.id.txt_total_recovered);
+        txtTotalTreating = view.findViewById(R.id.txt_total_treating);
 
-        txtTodayVietnamCase = view.findViewById(R.id.lbl_today_cases);
-        txtTodayVietnamDeath = view.findViewById(R.id.lbl_today_death);
-        txtTodayVietnamRecovered = view.findViewById(R.id.lbl_today_recovered);
-        txtTodayVietnamTreating = view.findViewById(R.id.lbl_today_treating);
+        txtTodayCase = view.findViewById(R.id.lbl_today_cases);
+        txtTodayDeath = view.findViewById(R.id.lbl_today_death);
+        txtTodayRecovered = view.findViewById(R.id.lbl_today_recovered);
+        txtTodayTreating = view.findViewById(R.id.lbl_today_treating);
     }
 
 

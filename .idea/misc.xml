@@ -5,18 +5,23 @@
       <map>
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/btn_background_select.xml" value="0.1" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/btn_chose_local.xml" value="0.1170940170940171" />
+        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/btn_qr_background_select.xml" value="0.17606837606837608" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/btn_view.xml" value="0.1170940170940171" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/ic_cases.xml" value="0.1170940170940171" />
+        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/ic_circle.xml" value="0.22179487179487178" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/ic_home.xml" value="0.1141025641025641" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/ic_home_launcher_background.xml" value="0.1141025641025641" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/ic_launcher_background.xml" value="0.13703703703703704" />
+        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/ic_location.xml" value="0.22179487179487178" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/ic_user_img.xml" value="0.16538461538461538" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/info_view.xml" value="0.12008547008547009" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/item_selector.xml" value="0.1141025641025641" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/light_blue_btn_background.xml" value="0.1111111111111111" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/light_blue_corner_background.xml" value="0.12008547008547009" />
+        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/light_white_corner_background.xml" value="0.22179487179487178" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/lightblue_corner_background.xml" value="0.1111111111111111" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/linear_layout_header.xml" value="0.12008547008547009" />
+        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/linear_place_has_come_background.xml" value="0.22179487179487178" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/linear_shadow.xml" value="0.16538461538461538" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/round_corner.xml" value="0.1141025641025641" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/drawable/stroke_corner_img.xml" value="0.1141025641025641" />
@@ -25,10 +30,13 @@
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/activity_home2.xml" value="0.1" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/activity_main.xml" value="0.1453804347826087" />
+        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/activity_qr.xml" value="0.12228260869565218" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/fragment_health.xml" value="0.11196581196581197" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/fragment_home.xml" value="0.11200000000000002" />
-        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/fragment_q_r.xml" value="0.136" />
+        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/fragment_place_has_been.xml" value="0.176" />
+        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/fragment_q_r.xml" value="0.152" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/gridview_row.xml" value="0.176" />
+        <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/place_menu.xml" value="0.2" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/layout/show_info.xml" value="0.10384615384615385" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/menu/info_menu.xml" value="0.264" />
         <entry key="..\:/Phat_trien_ung_dung/Covid19Information/app/src/main/res/menu/item_menu.xml" value="0.264" />

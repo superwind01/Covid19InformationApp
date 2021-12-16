@@ -21,16 +21,18 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
                 return new HomeFragment();
 
             case 1:
-                return new QRFragment();
+                return new PlaceHasBeenFragment();
 
             case 2:
                 return new HealthFragment();
+            case 3:
+                return new QRFragment();
 
         }
     }
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 4;
     }
 }

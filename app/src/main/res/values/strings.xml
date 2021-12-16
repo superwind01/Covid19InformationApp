@@ -21,4 +21,6 @@
     <string name="total">Total</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="places_has_been_come">The place has been come</string>
+    <string name="qrScan">QR Scan</string>
 </resources>
