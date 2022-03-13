@@ -25,14 +25,12 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
 
             case 2:
                 return new InfoFragment();
-            case 3:
-                return new QRFragment();
 
         }
     }
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 3;
     }
 }

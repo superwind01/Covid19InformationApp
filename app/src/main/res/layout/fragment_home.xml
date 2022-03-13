@@ -98,398 +98,407 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linear_local">
 
-        <TableLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TableRow
+            <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="12dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/light_blue_btn_background"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="12dp">
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/light_blue_btn_background"
+                        android:orientation="vertical">
 
-                        <LinearLayout
-                            android:id="@+id/linear_ic_cases"
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                            android:layout_height="match_parent"
+                            android:layout_margin="12dp">
 
-                            <ImageView
-                                android:id="@+id/imgView_cases"
-                                android:layout_width="40dp"
+                            <LinearLayout
+                                android:id="@+id/linear_ic_cases"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/imgView_cases"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_cases" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
                                 android:layout_height="40dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintBottom_toBottomOf="@+id/linear_ic_cases"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:srcCompat="@drawable/ic_cases" />
+                                app:layout_constraintTop_toTopOf="parent">
 
-                        </LinearLayout>
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_up_arrow" />
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linear_ic_cases"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                                <TextView
+                                    android:id="@+id/lbl_today_cases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="Lbl_Cases" />
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_up_arrow" />
+                            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/lbl_today_cases"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="Lbl_Cases" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toTopOf="@+id/linear_today_case"
-                            app:layout_constraintTop_toBottomOf="@+id/linear_ic_cases">
-
-                            <TextView
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:text="@string/cases"
-                                android:textSize="20sp"
-                                android:textStyle="bold"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/linear_ic_cases" />
+                                app:layout_constraintBottom_toTopOf="@+id/linear_today_case"
+                                app:layout_constraintTop_toBottomOf="@+id/linear_ic_cases">
 
-                        </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/cases"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/linear_ic_cases" />
 
-                        <LinearLayout
-                            android:id="@+id/linear_today_case"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toBottomOf="parent">
+                            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/txt_total_cases"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:id="@+id/linear_today_case"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:text="@string/total"
-                                android:textSize="20sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
+                                app:layout_constraintBottom_toBottomOf="parent">
 
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </LinearLayout>
-            </TableRow>
+                                <TextView
+                                    android:id="@+id/txt_total_cases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/total"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </TableRow>
 
-                <LinearLayout
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="12dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/light_blue_btn_background"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="12dp">
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/light_blue_btn_background"
+                        android:orientation="vertical">
 
-                        <LinearLayout
-                            android:id="@+id/linear_ic_death"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="12dp">
 
-                            <ImageView
-                                android:id="@+id/imgView_death"
-                                android:layout_width="40dp"
+                            <LinearLayout
+                                android:id="@+id/linear_ic_death"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/imgView_death"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_death" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
                                 android:layout_height="40dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintBottom_toBottomOf="@+id/linear_ic_death"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:srcCompat="@drawable/ic_death" />
-                        </LinearLayout>
+                                app:layout_constraintTop_toTopOf="parent">
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linear_ic_death"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_up_arrow" />
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_up_arrow" />
+                                <TextView
+                                    android:id="@+id/lbl_today_death"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="Lbl_Cases" />
 
-                            <TextView
-                                android:id="@+id/lbl_today_death"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="Lbl_Cases" />
+                            </LinearLayout>
 
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toTopOf="@+id/linear_today_death"
-                            app:layout_constraintTop_toBottomOf="@+id/linear_ic_death">
-
-                            <TextView
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:text="@string/death"
-                                android:textSize="20sp"
-                                android:textStyle="bold"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/linear_ic_cases" />
+                                app:layout_constraintBottom_toTopOf="@+id/linear_today_death"
+                                app:layout_constraintTop_toBottomOf="@+id/linear_ic_death">
 
-                        </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/death"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/linear_ic_cases" />
 
-                        <LinearLayout
-                            android:id="@+id/linear_today_death"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toBottomOf="parent">
+                            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/txt_total_death"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:id="@+id/linear_today_death"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:text="@string/total"
-                                android:textSize="20sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
+                                app:layout_constraintBottom_toBottomOf="parent">
 
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </LinearLayout>
-            </TableRow>
+                                <TextView
+                                    android:id="@+id/txt_total_death"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/total"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </TableRow>
 
-                <LinearLayout
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="12dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/light_blue_btn_background"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="12dp">
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/light_blue_btn_background"
+                        android:orientation="vertical">
 
-                        <LinearLayout
-                            android:id="@+id/linear_ic_recovered"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="12dp">
 
-                            <ImageView
-                                android:id="@+id/imgView_recovered"
-                                android:layout_width="40dp"
+                            <LinearLayout
+                                android:id="@+id/linear_ic_recovered"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/imgView_recovered"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_recovered" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
                                 android:layout_height="40dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintBottom_toBottomOf="@+id/linear_ic_recovered"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:srcCompat="@drawable/ic_recovered" />
-                        </LinearLayout>
+                                app:layout_constraintTop_toTopOf="parent">
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linear_ic_recovered"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_up_arrow" />
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_up_arrow" />
+                                <TextView
+                                    android:id="@+id/lbl_today_recovered"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="Lbl_Cases" />
 
-                            <TextView
-                                android:id="@+id/lbl_today_recovered"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="Lbl_Cases" />
+                            </LinearLayout>
 
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toTopOf="@+id/linear_today_recovred"
-                            app:layout_constraintTop_toBottomOf="@+id/linear_ic_recovered">
-
-                            <TextView
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:text="@string/recovered"
-                                android:textSize="20sp"
-                                android:textStyle="bold"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/linear_ic_recovered" />
+                                app:layout_constraintBottom_toTopOf="@+id/linear_today_recovred"
+                                app:layout_constraintTop_toBottomOf="@+id/linear_ic_recovered">
 
-                        </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/recovered"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/linear_ic_recovered" />
 
-                        <LinearLayout
-                            android:id="@+id/linear_today_recovred"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toBottomOf="parent">
+                            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/txt_total_recovered"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:id="@+id/linear_today_recovred"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:text="@string/total"
-                                android:textSize="20sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
+                                app:layout_constraintBottom_toBottomOf="parent">
 
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </LinearLayout>
-            </TableRow>
+                                <TextView
+                                    android:id="@+id/txt_total_recovered"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/total"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </TableRow>
 
-                <LinearLayout
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="12dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/light_blue_btn_background"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="12dp">
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/light_blue_btn_background"
+                        android:orientation="vertical">
 
-                        <LinearLayout
-                            android:id="@+id/linear_ic_treating"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="12dp">
 
-                            <ImageView
-                                android:id="@+id/imgView_treating"
-                                android:layout_width="40dp"
+                            <LinearLayout
+                                android:id="@+id/linear_ic_treating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/imgView_treating"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_treating" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
                                 android:layout_height="40dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintBottom_toBottomOf="@+id/linear_ic_treating"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:srcCompat="@drawable/ic_treating" />
-                        </LinearLayout>
+                                app:layout_constraintTop_toTopOf="parent">
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linear_ic_treating"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_down_arrow" />
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_down_arrow" />
+                                <TextView
+                                    android:id="@+id/lbl_today_treating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="Lbl_Cases" />
 
-                            <TextView
-                                android:id="@+id/lbl_today_treating"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="Lbl_Cases" />
+                            </LinearLayout>
 
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toTopOf="@+id/linear_today_treating"
-                            app:layout_constraintTop_toBottomOf="@+id/linear_ic_treating">
-
-                            <TextView
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:text="@string/treating"
-                                android:textSize="20sp"
-                                android:textStyle="bold"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/linear_ic_treating" />
+                                app:layout_constraintBottom_toTopOf="@+id/linear_today_treating"
+                                app:layout_constraintTop_toBottomOf="@+id/linear_ic_treating">
 
-                        </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/treating"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/linear_ic_treating" />
 
-                        <LinearLayout
-                            android:id="@+id/linear_today_treating"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toBottomOf="parent">
+                            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/txt_total_treating"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:id="@+id/linear_today_treating"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:text="@string/total"
-                                android:textSize="20sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
+                                app:layout_constraintBottom_toBottomOf="parent">
 
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </LinearLayout>
-            </TableRow>
+                                <TextView
+                                    android:id="@+id/txt_total_treating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/total"
+                                    android:textSize="20sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </TableRow>
 
 
-        </TableLayout>
+            </TableLayout>
+        </ScrollView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

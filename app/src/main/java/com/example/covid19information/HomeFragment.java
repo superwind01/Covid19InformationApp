@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import DecimalFormat.NumberToDecimal;
 import api.VolleryResponseListener;
 import api.VolleyService;
 import model.ModelCommon;
@@ -122,28 +123,28 @@ public class HomeFragment extends Fragment {
                             addControls();
                             //Gan du lieu cua vietnam cho txt va lbl
                             if(pick_item == 0) {
-                                txtTodayCase.setText(String.valueOf(today.getInfoInternal().getCases()));
-                                txtTodayDeath.setText(String.valueOf(today.getInfoInternal().getDeath()));
-                                txtTodayRecovered.setText(String.valueOf(today.getInfoInternal().getRecovered()));
-                                txtTodayTreating.setText(String.valueOf(today.getInfoInternal().getTreating()));
+                                txtTodayCase.setText(NumberToDecimal.main(today.getInfoInternal().getCases()));
+                                txtTodayDeath.setText(NumberToDecimal.main(today.getInfoInternal().getDeath()));
+                                txtTodayRecovered.setText(NumberToDecimal.main(today.getInfoInternal().getRecovered()));
+                                txtTodayTreating.setText(NumberToDecimal.main(today.getInfoInternal().getTreating()));
 
-                                txtTotalCases.setText(String.valueOf(total.getInfoInternal().getCases()));
-                                txtTotalDeath.setText(String.valueOf(total.getInfoInternal().getDeath()));
-                                txtTotalRecovered.setText(String.valueOf(total.getInfoInternal().getRecovered()));
-                                txtTotalTreating.setText(String.valueOf(total.getInfoInternal().getTreating()));
+                                txtTotalCases.setText(NumberToDecimal.main(total.getInfoInternal().getCases()));
+                                txtTotalDeath.setText(NumberToDecimal.main(total.getInfoInternal().getDeath()));
+                                txtTotalRecovered.setText(NumberToDecimal.main(total.getInfoInternal().getRecovered()));
+                                txtTotalTreating.setText(NumberToDecimal.main(total.getInfoInternal().getTreating()));
                             }
                             //Gan du lieu cua world cho txt va lbl
                             else
                             {
-                                txtTodayCase.setText(String.valueOf(today.getInfoWorld().getCases()));
-                                txtTodayDeath.setText(String.valueOf(today.getInfoWorld().getDeath()));
-                                txtTodayRecovered.setText(String.valueOf(today.getInfoWorld().getRecovered()));
-                                txtTodayTreating.setText(String.valueOf(today.getInfoWorld().getTreating()));
+                                txtTodayCase.setText(NumberToDecimal.main(today.getInfoWorld().getCases()));
+                                txtTodayDeath.setText(NumberToDecimal.main(today.getInfoWorld().getDeath()));
+                                txtTodayRecovered.setText(NumberToDecimal.main(today.getInfoWorld().getRecovered()));
+                                txtTodayTreating.setText(NumberToDecimal.main(today.getInfoWorld().getTreating()));
 
-                                txtTotalCases.setText(String.valueOf(total.getInfoWorld().getCases()));
-                                txtTotalDeath.setText(String.valueOf(total.getInfoWorld().getDeath()));
-                                txtTotalRecovered.setText(String.valueOf(total.getInfoWorld().getRecovered()));
-                                txtTotalTreating.setText(String.valueOf(total.getInfoWorld().getTreating()));
+                                txtTotalCases.setText(NumberToDecimal.main(total.getInfoWorld().getCases()));
+                                txtTotalDeath.setText(NumberToDecimal.main(total.getInfoWorld().getDeath()));
+                                txtTotalRecovered.setText(NumberToDecimal.main(total.getInfoWorld().getRecovered()));
+                                txtTotalTreating.setText(NumberToDecimal.main(total.getInfoWorld().getTreating()));
                             }
                         }
                     });

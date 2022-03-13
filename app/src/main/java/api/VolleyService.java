@@ -62,8 +62,8 @@ public class VolleyService {
                     mJson = parser.parse(String.valueOf(overview));
                     OverViewInfo[] objectOverViewInfo = gson.fromJson(mJson,OverViewInfo[].class);
 
-                  ArrayList<OverViewInfo> overviewInfos = new ArrayList<>();
-                 Arrays.stream(objectOverViewInfo).forEach(overviewInfos::add);
+                    ArrayList<OverViewInfo> overviewInfos = new ArrayList<>();
+                    Arrays.stream(objectOverViewInfo).forEach(overviewInfos::add);
 
                     mJson = parser.parse(String.valueOf(locations));
                     Location[] objectLocation = gson.fromJson(mJson,Location[].class);
